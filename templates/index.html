@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Matcher</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            background-size: cover;
+            background-position: left;
+            font-family: 'arial', serif;
+        }
+        body {
+    background-image: url('/static/smartres.jpg');
+    /* Other CSS styles */
+}
+
+        #content {
+            text-align: left ; 
+            color: #c00505;  
+            max-width: 1100px; 
+            padding: 50px; 
+        }
+        h1 {
+            font-weight: bold; 
+            font-size: 56px; 
+            margin-bottom: 20px; 
+        }
+        p {
+            font-size: 30px; 
+            color: #c9bbbb; 
+        }
+        
+        /* Hide the default "No file chosen" text */
+        input[type="file"] {
+            color: transparent;
+            padding: 10px 20px;
+            font-size: 20px; 
+            background-color: #df9ba5;  
+            border: none; 
+            color: rgb(20, 7, 7);
+            cursor: pointer; 
+            margin-bottom: 10px;
+            margin-right: 8px;
+        }
+        /* Increase the size of the submit button */
+        input[type="submit"] {
+            padding: 10px 20px; 
+            font-size: 24px; 
+            background-color: #df9ba5; 
+            border: none; 
+            color: rgb(0, 0, 0); 
+            cursor: pointer; 
+            margin-left: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <h1>Welcome to Resume Matcher</h1>
+        <p>Please upload your  </p>
+        <p>resume files to get started.</p>
+        <form action="/resume_matcher" method="post" enctype="multipart/form-data">
+            <!-- Add a custom label for the file input -->
+            <label for="file-upload" style="cursor: pointer;"></label>
+            <input type="file" name="file" id="file-upload" multiple>
+            <input type="submit" value="Upload">
+        </form>
+    </div>
+</body>
+</html>
